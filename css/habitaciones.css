@@ -1,0 +1,275 @@
+/* --- Estilos para la página de Habitaciones --- */
+
+.section-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.section-card h3 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+/* Estado General de Habitaciones */
+.room-status-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.status-box {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    transition: all 0.2s ease;
+}
+
+.status-box:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+.status-box h4 {
+    margin-top: 0;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.status-box p {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* Colores específicos para los estados */
+.status-box.available p {
+    color: #4CAF50;
+}
+
+/* Verde */
+.status-box.occupied p {
+    color: #f44336;
+}
+
+/* Rojo */
+.status-box.cleaning p {
+    color: #ffc107;
+}
+
+/* Amarillo */
+.status-box.maintenance p {
+    color: #9c27b0;
+}
+
+/* Púrpura */
+
+/* Acciones de la tabla */
+.table-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    /* Para responsividad */
+    gap: 15px;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95em;
+    max-width: 300px;
+}
+
+.filter-select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 0.95em;
+    cursor: pointer;
+}
+
+.btn-export {
+    background-color: #2196f3;
+    /* Azul para exportar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-export:hover {
+    background-color: #1976d2;
+}
+
+/* Estilos de la Tabla de Datos */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th,
+.data-table td {
+    text-align: left;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.data-table th {
+    color: #777;
+    font-weight: 600;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.data-table td {
+    color: #444;
+    font-size: 0.95em;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Badge de estado en tabla */
+.status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.status-badge.available {
+    background-color: #e8f5e9;
+    /* Verde claro */
+    color: #4CAF50;
+}
+
+.status-badge.occupied {
+    background-color: #ffebee;
+    /* Rojo claro */
+    color: #f44336;
+}
+
+.status-badge.cleaning {
+    background-color: #fffde7;
+    /* Amarillo muy claro */
+    color: #ffc107;
+}
+
+.status-badge.maintenance {
+    background-color: #f3e5f5;
+    /* Púrpura muy claro */
+    color: #9c27b0;
+}
+
+/* Botones de acción en tabla */
+.btn-action {
+    background: none;
+    border: none;
+    color: #777;
+    font-size: 1.1em;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.btn-action:hover {
+    color: #2196f3;
+}
+
+.btn-action.edit:hover {
+    color: #ffc107;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .room-status-overview {
+        grid-template-columns: 1fr;
+        /* Apilar en móviles */
+    }
+
+    .table-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-input {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .data-table {
+        overflow-x: auto;
+        /* Permitir scroll horizontal si la tabla es muy ancha */
+        display: block;
+    }
+
+    .data-table thead,
+    .data-table tbody,
+    .data-table th,
+    .data-table td,
+    .data-table tr {
+        display: block;
+    }
+
+    .data-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .data-table tr {
+        border: 1px solid #f0f0f0;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        background-color: #fff;
+        padding: 15px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .data-table td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    .data-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: 600;
+        color: #777;
+    }
+
+    /* Añadir data-label a cada td en el HTML si se usa esta técnica de tabla responsiva */
+}
