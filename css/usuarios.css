@@ -25,6 +25,16 @@
     gap: 15px;
 }
 
+.back-button {
+  background-color: #28a745; 
+  color: white; 
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 .search-input,
 .filter-select {
     padding: 10px 15px;

@@ -35,6 +35,20 @@
     flex-grow: 1;
 }
 
+.back-button {
+  background-color: #28a745; 
+  color: white; 
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #218838; /* Un verde más oscuro al pasar el ratón */
+}
 .btn-export {
     background-color: #2196f3;
     color: white;
