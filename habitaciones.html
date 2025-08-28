@@ -176,6 +176,32 @@
             </div>
         </main>
     </div>
+    <button id="abrirModal">Editar Reserva</button>
+
+  <div id="modalReserva" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" id="cerrarModal">&times;</span>
+      <h2>Editar Reserva</h2>
+
+      <form id="formReserva">
+        <input type="hidden" id="reservaId" value="123" />
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" required>
+
+        <label for="habitacion">Habitación:</label>
+        <input type="text" id="habitacion" required>
+
+        <div class="acciones">
+          <button type="submit" id="actualizarBtn">Actualizar</button>
+          <button type="button" id="eliminarBtn" class="danger">Eliminar</button>
+        </div>
+      </form>
+    </div>
+  </div>
     <script src="#"></script>
     <script src="js/cerrar sesion.js"></script>
 </body>

@@ -1,0 +1,8 @@
+import{
+    consultarTiposHabitacion, 
+    actualizarHabitaciones, 
+    registrarHabitacion
+    
+} from "../service/habitacionesService"
+
+document.addEventListener("DOMContentLoaded", )

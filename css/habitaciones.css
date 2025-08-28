@@ -284,6 +284,75 @@
         font-weight: 600;
         color: #777;
     }
+    /* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-contenido {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 0 10px #0003;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+button {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#actualizarBtn {
+  background-color: #43CCCC;
+  color: #fff;
+}
+
+#eliminarBtn {
+  background-color: #A259FF;
+  color: #fff;
+}
+
+.danger {
+  background-color: #e74c3c !important;
+}
 
     /* Añadir data-label a cada td en el HTML si se usa esta técnica de tabla responsiva */
 }
